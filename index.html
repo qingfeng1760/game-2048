@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffd6ec">
+  <title>2048 · 粉色版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="head">
+      <div class="title-wrap">
+        <h1>2048</h1>
+        <p class="subtitle">粉色版</p>
+      </div>
+
+      <div class="scores">
+        <div class="score-box">
+          <span>得分</span>
+          <strong id="score">0</strong>
+          <i class="score-pop" id="score-pop" aria-hidden="true"></i>
+        </div>
+        <div class="score-box">
+          <span>最高分</span>
+          <strong id="best">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <div class="bar">
+      <p class="tip">合并相同数字，冲击 <b>2048</b>！</p>
+      <div class="actions">
+        <button id="new-game" class="btn" type="button">新游戏</button>
+        <button id="undo" class="btn" type="button" disabled>撤回</button>
+      </div>
+    </div>
+
+    <div class="board" id="board">
+      <div class="grid" id="grid"></div>
+      <div class="tiles" id="tiles"></div>
+      <div class="overlay" id="overlay">
+        <p id="overlay-text">游戏结束</p>
+        <button id="overlay-btn" class="btn" type="button">再来一局</button>
+      </div>
+    </div>
+
+    <p class="hint">方向键 / WASD 移动 · 也可在棋盘上滑动</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
